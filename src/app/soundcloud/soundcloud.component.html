@@ -1,0 +1,19 @@
+<div class="soundcloud-search">
+    <div class="search-bar">
+        <input [(ngModel)]="inputText" (keyup)="onKeyUp($event)" type="text" [maxlength]="maxLengthInput">
+        <button class="button button-go" type="button" (click)="startSearch()">go</button>
+        <div class="row">
+            <button class="button button-previous" type="button" (click)="previousPagination()">‹</button>
+            <button class="button button-next" type="button" (click)="nextPagination()">›</button>
+        </div>
+
+    </div>
+    <div class="result">
+        <p *ngIf="!trackList || trackList?.length === 0">No Results</p>
+        <ul>
+            <li *ngFor="let element of trackList">
+                <p>{{element?.title}}</p>
+            </li>
+        </ul>
+    </div>
+</div>

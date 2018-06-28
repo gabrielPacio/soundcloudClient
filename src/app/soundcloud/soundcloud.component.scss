@@ -1,0 +1,97 @@
+@import "./../../variables.scss";
+
+.soundcloud-search {
+    width: 400px;
+    margin: 100px auto;
+
+    textarea:focus, input:focus, button:focus {
+        outline: none;
+    }
+
+    .search-bar {
+        width: 100%;
+
+        input {
+            width: calc(100% - 57px);
+            font-size: 15px;
+            line-height: 18px;
+            padding: 3px 5px 5px 10px;
+            height: 23px;
+            background-color: lighten($petrol, 20%);
+            border:  2px solid lighten($purple, 20%);
+            border-bottom-left-radius: 17px;
+            border-top-left-radius: 17px;
+            color: lighten($bluish, 40%);
+
+            &:focus {
+                border: 2px solid lighten($purple, 40%);
+            }
+        }
+
+        .button-go {
+            position: relative;
+            z-index: 1;
+            top: 1px;
+            border-bottom-right-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+
+        .button {
+            height: 35px;
+            width: 32px;
+            font-size: 15px;
+            color: lighten($bluish, 40%);
+            background-color: $purple;
+            border: 2px solid lighten($purple, 20%);
+        }
+
+        .button-previous {
+            float: left;
+            border-bottom-left-radius: 50%;
+            border-top-left-radius: 50%;
+        }
+
+        .button-next {
+            float: right;
+            border-bottom-right-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+    }
+
+    .row {
+        padding: 10px 0;
+
+        &:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
+
+    .result {
+        background-color: lighten($petrol, 5%);
+        border: 2px solid $pumpkin;
+        border-radius: 17px;
+        min-height: 30px;
+
+        p {
+            margin: 0;
+            padding: 5px;
+
+            font-family: monospace;
+            color: $pumpkin;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+
+            li {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+            }
+        }
+    }
+}
